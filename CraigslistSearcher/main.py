@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 
-def getProductList():
-    url = "https://minneapolis.craigslist.org/search/sss?sort=rel&max_price=0"
+def getProductList(topic):
+    url = "https://minneapolis.craigslist.org/search/sss?query={subject}&max_price=0".format(subject = topic)
     page = requests.get(url)
 
     soup = BeautifulSoup(page.text, "html.parser")
@@ -32,4 +32,5 @@ def getProductList():
         index+=1
     print(info)
 if __name__ == "__main__":
-    getProductList()
+    topic = input("What are you looking for: ")
+    getProductList(topic)
