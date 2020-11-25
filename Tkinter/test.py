@@ -1,6 +1,8 @@
 from tkinter import *
 
 root = Tk()
+root.title("Chat App")
+
 Inputframe = Frame(root, width = 1000, height = 100)
 Inputframe.pack(side = BOTTOM)
 
