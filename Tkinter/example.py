@@ -1,4 +1,4 @@
-from Tkinter import *
+from tkinter import *
 
 root = Tk()
 frame = Frame(root)
@@ -18,3 +18,5 @@ bluebutton.pack( side = LEFT )
 
 blackbutton = Button(bottomframe, text="Black", fg="black")
 blackbutton.pack( side = BOTTOM)
+
+root.mainloop()
